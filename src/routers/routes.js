@@ -15,5 +15,6 @@ router.post("/register", authCtl.register);
 
 router.get("/dashboard", isLoggedIn, pageCtl.dashboardPage);
 router.get("/admin", isLoggedIn, hasRole("admin"), pageCtl.adminPage);
+router.get("/logout", authCtl.logout);
 
 export default router;
